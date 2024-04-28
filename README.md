@@ -143,6 +143,7 @@ https://ollama.com/
 https://blog.csdn.net/Yurixu/article/details/136443395
 
 1、安装完ollama后在后台中需要将ollama保持启动状态
+
 ![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/b0851265-1bc2-4f24-97a8-36fb296e6888)
 
 2、点开 https://ollama.com/library 网站，搜索然后选择好要安装的模型
