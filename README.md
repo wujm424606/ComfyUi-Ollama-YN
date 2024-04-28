@@ -75,7 +75,7 @@ Five function：
 This function is to generate prompt words that more closely follow the stable diffusion pattern
 
 
-Tips:
+# Tips:
 
 If you get an error that says there is no model, install the model as described above
 
