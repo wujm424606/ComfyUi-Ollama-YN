@@ -9,7 +9,7 @@ https://github.com/MinusZoneAI/ComfyUI-Prompt-MZ
 
 I would like to express my special thanks to the authors of these two projects
 
-INSTALLATION
+# INSTALLATION
 
 1、Install ComfyUI
 
@@ -18,13 +18,13 @@ The git git command is git clone https://github.com/wujm424606/ComfyUi-Ollama-YN
 
 3、Start/restart ComfyUI
 
-This section describes how to install ollama
+# This section describes how to install ollama
 
 https://ollama.com/
 
 You can download and install ollama from this website
 
-This section describes how to install models
+# This section describes how to install models
 
 1、You can choose models by https://ollama.com/library/llama3:8b-instruct-q4_K_M website
 
@@ -34,7 +34,7 @@ This section describes how to install models
 
 
 
-Let me introduce you to the functionality of this project.
+# Let me introduce you to the functionality of this project.
 
 First function:
 ![图片提示词推导](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/4792f5f0-27ea-4e82-8dc1-fe54cbb0dbc4)
