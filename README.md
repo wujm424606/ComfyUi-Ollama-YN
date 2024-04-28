@@ -74,3 +74,17 @@ Five function：
 
 This function is to generate prompt words that more closely follow the stable diffusion pattern
 
+
+Tips:
+
+If you get an error that says there is no model, install the model as described above
+
+This project involves installing model commands in CMD
+
+1、ollama run llama3:8b-instruct-q4_K_M
+2、ollama run llama3
+3、ollama run phi3
+4、ollama run phi3:3.8b-mini-instruct-4k-q4_K_M
+5、ollama run phi3:3.8b-mini-instruct-4k-fp16
+6、ollama run llava
+
