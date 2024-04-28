@@ -17,4 +17,4 @@ This function is to deduce the prompt words according to the picture
 
 ![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/7fe2a2b8-2b00-4388-becc-4646dca849c6)
 
-The default modle is llava model. If you have a better model, you can change the model.
+The default modle is llava model. If you have a better model, you can change the model by changing the model name
