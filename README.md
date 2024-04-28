@@ -1,3 +1,21 @@
+## Language
+
+- [English](#english)
+- [中文](#中文)
+
+---
+
+### English
+
+// Your English content here
+
+---
+
+### 中文
+
+// Your Chinese content here
+
+
 # ComfyUi-Ollama-YN
 This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup and comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
 
