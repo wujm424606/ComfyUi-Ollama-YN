@@ -195,7 +195,7 @@ https://blog.csdn.net/Yurixu/article/details/136443395
 这个功能是根据输入生成更符合stable diffusion格式的提示词
 
 
-# 提升:
+# 提示:
 
 如果你的后台出现没有模型的错误，请参考上面选择对应的模型进行安装
 
