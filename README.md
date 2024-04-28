@@ -108,6 +108,16 @@ This project involves installing model commands in CMD
 
 ### 中文
 
-// Your Chinese content here
+# ComfyUi-Ollama-YN
+这是一个整合的项目，我在comfyui-ollama 项目的基础上参考了 ComfyUI-Prompt-MZ 项目的提示词和正则代码使生成的提示词更符合stable diffusion的格式
+
+参考的两个项目是
+
+https://github.com/stavsap/comfyui-ollama
+
+https://github.com/MinusZoneAI/ComfyUI-Prompt-MZ
+
+在这里我向这两个项目的作者表示由衷的感谢
+
 
 
