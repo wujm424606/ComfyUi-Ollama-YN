@@ -45,4 +45,7 @@ This function is to answer questions by contacting above
 Five function：
 
 
+![生成更符合stable diffusion的提示词](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/0981b60b-64f6-4840-9e02-d16f67041718)
+
+This function is to generate prompt words that more closely follow the stable diffusion pattern
 
