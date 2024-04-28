@@ -18,3 +18,14 @@ This function is to deduce the prompt words according to the picture
 ![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/7fe2a2b8-2b00-4388-becc-4646dca849c6)
 
 The default modle is llava model. If you have a better model, you can change the model by changing the model name
+
+Second function:
+
+![简单问答](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/21c8be5a-6470-4063-8a8a-3d787dadff82)
+
+This function is a simple question and answer function.
+
+![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/86021a02-b67f-4e8b-a759-96858cd5311b)
+
+
+The default modle is llama3 model. If you have a better model, you can change the model by changing the model name
