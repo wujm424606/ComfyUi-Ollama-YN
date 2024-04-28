@@ -1,5 +1,5 @@
 # ComfyUi-Ollama-YN
-This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup based on the comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
+This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup and comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
 
 The projects which I referenced are 
 
