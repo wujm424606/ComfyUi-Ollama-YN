@@ -7,15 +7,6 @@
 
 ### English
 
-// Your English content here
-
----
-
-### 中文
-
-// Your Chinese content here
-
-
 # ComfyUi-Ollama-YN
 This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup and comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
 
@@ -110,4 +101,13 @@ This project involves installing model commands in CMD
 5、ollama run phi3:3.8b-mini-instruct-4k-fp16
 
 6、ollama run llava
+
+
+
+---
+
+### 中文
+
+// Your Chinese content here
+
 
