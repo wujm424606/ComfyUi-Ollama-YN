@@ -10,10 +10,11 @@ https://github.com/MinusZoneAI/ComfyUI-Prompt-MZ
 I would like to express my special thanks to the authors of these two projects
 
 INSTALLATION
+
 1、Install ComfyUI
 
 2、git clone in the custom_nodes folder inside your ComfyUI installation or download as zip and unzip the contents to custom_nodes/ComfyUi-Ollama-YN.
-The git git command is 
+The git git command is git clone https://github.com/wujm424606/ComfyUi-Ollama-YN.git
 
 3、Start/restart ComfyUI
 
