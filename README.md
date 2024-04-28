@@ -1,8 +1,12 @@
 # ComfyUi-Ollama-YN
 This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup based on the comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
+
 The projects which I referenced are 
+
 https://github.com/stavsap/comfyui-ollama
+
 https://github.com/MinusZoneAI/ComfyUI-Prompt-MZ
+
 I would like to express my special thanks to the authors of these two projects
 
 Let me introduce you to the functionality of this project.
