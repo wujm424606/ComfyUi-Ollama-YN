@@ -18,6 +18,18 @@ The git git command is git clone https://github.com/wujm424606/ComfyUi-Ollama-YN
 
 3、Start/restart ComfyUI
 
+This section describes how to install ollama
+
+https://ollama.com/
+You can download and install ollama from this website
+
+This section describes how to install models
+
+1、You can choose models by https://ollama.com/library/llama3:8b-instruct-q4_K_M website
+2、Input such as ollama run llama3:8b-instruct-q4_K_M in CMD in any folders
+![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/284ea779-3112-456e-bc1a-2ecd67c60021)
+
+
 
 Let me introduce you to the functionality of this project.
 
