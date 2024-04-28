@@ -29,3 +29,20 @@ This function is a simple question and answer function.
 
 
 The default modle is llama3 model. If you have a better model, you can change the model by changing the model name
+
+Third function:
+
+![提示词润色](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/252d3f32-7d4f-4df3-81a2-27a75f74fd58)
+
+This function allows the model to be embellished according to your prompt words
+
+Four function:
+
+![上下文联系问答](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/5007aa0f-1cef-42a6-8b98-fc94c529eb71)
+
+This function is to answer questions by contacting above
+
+Five function：
+
+
+
