@@ -503,7 +503,7 @@ response:
 
         # 句号换成逗号
         while full_response.find(".") != -1:
-            full_response = full_response.replace(".", "")
+            full_response = full_response.replace(".", ",")
 
         # 去除分号
         while full_response.find(";") != -1:
