@@ -39,6 +39,8 @@ class OllamaVision:
                     "multiline": False,
                     "default": "llava"
                 }),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                "keep_alive": (["0", "60m"],),
                 
             },
         }
@@ -48,7 +50,7 @@ class OllamaVision:
     FUNCTION = "ollama_vision"
     CATEGORY = "Ollama"
 
-    def ollama_vision(self, images, query, debug, url, model):
+    def ollama_vision(self, images, query,seed, debug, url, keep_alive, model):
         images_b64 = []
 
         for (batch_number, image) in enumerate(images):
@@ -60,6 +62,9 @@ class OllamaVision:
             images_b64.append(str(img_bytes, 'utf-8'))
 
         client = Client(host=url)
+        options = {
+            "seed": seed,
+        }
 
         if debug == "enable":
             print(f"""[Ollama Vision] 
@@ -68,10 +73,12 @@ request query params:
 - query: {query}
 - url: {url}
 - model: {model}
+- options: {options}
+- keep_alive: {keep_alive}
 
 """)
 
-        response = client.generate(model=model, prompt=query, images=images_b64)
+        response = client.generate(model=model, prompt=query, keep_alive=keep_alive, options=options, images=images_b64)
 
 
 
@@ -99,6 +106,8 @@ class OllamaGenerate:
                     "multiline": False,
                     "default": "llama3"
                 }),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
+                "keep_alive": (["0", "60m"],),
             },
         }
 
@@ -107,9 +116,13 @@ class OllamaGenerate:
     FUNCTION = "ollama_generate"
     CATEGORY = "Ollama"
 
-    def ollama_generate(self, prompt, debug, url, model):
+    def ollama_generate(self, prompt, debug, url, model, seed, keep_alive):
 
         client = Client(host=url)
+
+        options = {
+            "seed": seed,
+        }
 
         if debug == "enable":
             print(f"""[Ollama Generate] 
@@ -121,7 +134,7 @@ request query params:
 
             """)
 
-        response = client.generate(model=model, prompt=prompt)
+        response = client.generate(model=model, prompt=prompt, options=options, keep_alive=keep_alive)
 
         if debug == "enable":
                 print(f"""\n[Ollama Generate]
@@ -139,6 +152,10 @@ response:
 - response: {response["response"]}
 
 - context: {response["context"]}
+
+- options : {options}
+- keep_alive: {keep_alive}
+
 
 """)
 
@@ -180,6 +197,7 @@ class OllamaGenerateAdvance:
                 "temperature": ("FLOAT", {"default": 0.5, "min": 0, "max": 1, "step": 0.05}),
                 "num_predict": ("FLOAT", {"default": -1, "min": -2, "max": 2048, "step": 1}),
                 "tfs_z": ("FLOAT", {"default": 1, "min": 1, "max": 1000, "step": 0.05}),
+                "keep_alive": (["0", "60m"],),
             },"optional": {
                 "context": ("STRING", {"forceInput": True}),
             }
@@ -190,7 +208,7 @@ class OllamaGenerateAdvance:
     FUNCTION = "ollama_generate_advance"
     CATEGORY = "Ollama"
 
-    def ollama_generate_advance(self, prompt, debug, url, model, system, seed,top_k, top_p,temperature,num_predict,tfs_z, context=None):
+    def ollama_generate_advance(self, prompt, debug, url, model, system, seed, top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
 
         client = Client(host=url)
 
@@ -228,10 +246,11 @@ request query params:
 - prompt: {prompt}
 - url: {url}
 - model: {model}
+- keep_alive: {keep_alive}
 - options: {options}
 """)
 
-        response = client.generate(model=model, system=system, prompt=prompt, context=context, options=options)
+        response = client.generate(model=model, system=system, prompt=prompt, keep_alive=keep_alive, context=context, options=options)
 
         if debug == "enable":
             print(f"""\n[Ollama Generate Advance]
@@ -299,6 +318,7 @@ Please generate the long prompt version of the short one according to the given 
                 "temperature": ("FLOAT", {"default": 0.5, "min": 0, "max": 1, "step": 0.05}),
                 "num_predict": ("FLOAT", {"default": -1, "min": -2, "max": 2048, "step": 1}),
                 "tfs_z": ("FLOAT", {"default": 1, "min": 1, "max": 1000, "step": 0.05}),
+                "keep_alive": (["0", "60m"],),
             },"optional": {
                 "context": ("STRING", {"forceInput": True}),
             }
@@ -309,7 +329,7 @@ Please generate the long prompt version of the short one according to the given 
     FUNCTION = "ollama_generate_advance"
     CATEGORY = "Ollama"
 
-    def ollama_generate_advance(self, prompt, debug, style_categories, url, model, system, seed,top_k, top_p,temperature,num_predict,tfs_z, context=None):
+    def ollama_generate_advance(self, prompt, debug, style_categories, url, model, system, seed,top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
 
         prompt = f"{prompt} \nUse the following template: {json.dumps(prompt_template)}."
         client = Client(host=url)
@@ -348,10 +368,11 @@ request query params:
 - prompt: {prompt}
 - url: {url}
 - model: {model}
+- keep_alive: {keep_alive}
 - options: {options}
 """)
 
-        response = client.generate(model=model, system=system, prompt=prompt, context=context, options=options)
+        response = client.generate(model=model, system=system, prompt=prompt, context=context, keep_alive=keep_alive, options=options)
 
         if debug == "enable":
             print(f"""\n[Ollama Generate Advance]
