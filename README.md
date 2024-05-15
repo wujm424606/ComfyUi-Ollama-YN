@@ -1,7 +1,3 @@
-##Update
-5/15/2024 Add keep_alive support
-0 means releasing the video memory immediately after loading the model, while 60m represents that the model will not be released from the video memory until 60m has passed since it was loaded.
-
 ## Language
 
 - [English](#english)
@@ -10,6 +6,11 @@
 ---
 
 ### English
+
+## Update
+
+5/15/2024 Add keep_alive support
+0 means releasing the video memory immediately after loading the model, while 60m represents that the model will not be released from the video memory until 60m has passed since it was loaded.
 
 # ComfyUi-Ollama-YN
 This is just an integrated project. I refer to the ComfyUI-Prompt-MZ project prompt word template setup and comfyui-ollama project to make the prompt word generation more consistent with the requirements of stable diffusion
@@ -112,7 +113,8 @@ This project involves installing model commands in CMD
 
 ### 中文
 
-#Update
+## 更新
+
 5/15/2024 加入keep_alive支持
 0为加载模型后即释放显存，60m代表模型在显存内存在60m后才会释放
 
