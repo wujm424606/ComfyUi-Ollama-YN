@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-ollama-yn"
+description = "Custom ComfyUI Nodes for interacting with [a/Ollama](https://ollama.com/) using the [a/ollama python client](https://github.com/ollama/ollama-python).\n Meanwhile it will provide better prompt descriptor for stable diffusion."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["ollama>=0.1.8"]
+
+[project.urls]
+Repository = "https://github.com/wujm424606/ComfyUi-Ollama-YN"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUi-Ollama-YN"
+Icon = ""
