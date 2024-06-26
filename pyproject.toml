@@ -10,6 +10,6 @@ Repository = "https://github.com/wujm424606/ComfyUi-Ollama-YN"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "Peter WANG"
+PublisherId = "wujm424606"
 DisplayName = "ComfyUi-Ollama-YN"
 Icon = ""
