@@ -186,6 +186,10 @@ class OllamaGenerateAdvance:
                 #     "default": (["llama3:8b-instruct-q4_K_M", "llama3", "phi3:instruct", "phi3"],)
                 # }),
                 "model": (["llama3:8b-instruct-q4_K_M", "llama3", "phi3:3.8b-mini-instruct-4k-q4_K_M", "phi3", "phi3:3.8b-mini-instruct-4k-fp16"],),
+                "extra_model": ("STRING", {
+                    "multiline": False,
+                    "default": "none"
+                }),               
                 "system": ("STRING", {
                     "multiline": True,
                     "default": "You are creating a prompt for Stable Diffusion to generate an image. First step: understand the input and generate a text prompt for the input. Second step: only respond in English with the prompt itself in phrase, but embellish it as needed but keep it under 200 tokens.",
@@ -208,7 +212,7 @@ class OllamaGenerateAdvance:
     FUNCTION = "ollama_generate_advance"
     CATEGORY = "Ollama"
 
-    def ollama_generate_advance(self, prompt, debug, url, model, system, seed, top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
+    def ollama_generate_advance(self, prompt, debug, url, model, extra_model, system, seed, top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
 
         client = Client(host=url)
 
@@ -246,10 +250,13 @@ request query params:
 - prompt: {prompt}
 - url: {url}
 - model: {model}
+- extra_model: {extra_model}
 - keep_alive: {keep_alive}
 - options: {options}
 """)
-
+            
+        if extra_model != "none":
+            model = extra_model
         response = client.generate(model=model, system=system, prompt=prompt, keep_alive=keep_alive, context=context, options=options)
 
         if debug == "enable":
@@ -296,6 +303,10 @@ class OllamaSpecialGenerateAdvance:
                 #     "default": (["llama3:8b-instruct-q4_K_M", "llama3", "phi3:instruct", "phi3"],)
                 # }),
                 "model": (["llama3:8b-instruct-q4_K_M", "llama3", "phi3:3.8b-mini-instruct-4k-q4_K_M", "phi3", "phi3:3.8b-mini-instruct-4k-fp16"],),
+                "extra_model": ("STRING", {
+                    "multiline": False,
+                    "default": "none"
+                }), 
                 "system": ("STRING", {
                     "multiline": True,
                     "default": """Stable Diffusion is an AI art generation model similar to DALLE-2.
@@ -329,7 +340,7 @@ Please generate the long prompt version of the short one according to the given 
     FUNCTION = "ollama_generate_advance"
     CATEGORY = "Ollama"
 
-    def ollama_generate_advance(self, prompt, debug, style_categories, url, model, system, seed,top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
+    def ollama_generate_advance(self, prompt, debug, style_categories, url, model, extra_model, system, seed,top_k, top_p,temperature,num_predict,tfs_z, keep_alive, context=None):
 
         prompt = f"{prompt} \nUse the following template: {json.dumps(prompt_template)}."
         client = Client(host=url)
@@ -368,10 +379,12 @@ request query params:
 - prompt: {prompt}
 - url: {url}
 - model: {model}
+- extra_model: {extra_model}
 - keep_alive: {keep_alive}
 - options: {options}
 """)
-
+        if extra_model != "none":
+            model = extra_model
         response = client.generate(model=model, system=system, prompt=prompt, context=context, keep_alive=keep_alive, options=options)
 
         if debug == "enable":
