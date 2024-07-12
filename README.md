@@ -10,6 +10,7 @@
 ## Update
 
 5/15/2024 Add keep_alive support
+7/15/2024 Add extra model name which it can be added by users.
 
 0 means releasing the video memory immediately after loading the model, while 60m represents that the model will not be released from the video memory until 60m has passed since it was loaded.
 
@@ -117,6 +118,7 @@ This project involves installing model commands in CMD
 ## 更新
 
 5/15/2024 加入keep_alive支持
+7/24/2024 加入extra_model支持，使用者可以根据自己想要加载的模型再里面填写，当extra_model不为none，将根据extra_model进行加载模型
 
 0为加载模型后即释放显存，60m代表模型在显存内存在60m后才会释放
 
