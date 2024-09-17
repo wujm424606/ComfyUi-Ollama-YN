@@ -63,7 +63,7 @@ def add_item_to_csv(file_path, item,  column_name):
     # print("last_index:", last_index)
     # print("item:", item)
     signal = True
-    current_index = 0
+    current_index = -1
     if item in df[column_name].values:
         return
     for index, col in enumerate(df[column_name]):
