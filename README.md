@@ -9,6 +9,7 @@
 
 ## Update
 
+9/17/2024 I made a major update that adjusted the way we download models and load display models, and also provided the ability to delete download models and save load contexts, Please read the whole Readme file.
 5/15/2024 Add keep_alive support
 7/15/2024 Add extra model name which it can be added by users.
 
@@ -42,72 +43,150 @@ You can download and install ollama from this website
 
 # This section describes how to install models
 
-1、You can choose models by https://ollama.com/library/llama3:8b-instruct-q4_K_M website
+1、You can choose models by [https://ollama.com/library/llama3:8b-instruct-q4_K_M website](https://ollama.com/brxce/stable-diffusion-prompt-generator)
 
-2、Input such as ollama run llama3:8b-instruct-q4_K_M in CMD in any folders
+2、Input model name in the extra model and run
+![DownLoad New Model Workflow](https://github.com/user-attachments/assets/9ffa6a7e-cc9b-4121-ac0f-c9093854b37c)
 
-![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/284ea779-3112-456e-bc1a-2ecd67c60021)
+
+Detailed information be shown in the Tips.
 
 
 
 # Let me introduce you to the functionality of this project.
 
 First function:
-![图片提示词推导](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/4792f5f0-27ea-4e82-8dc1-fe54cbb0dbc4)
+![My Ollama Vision WorkFlow](https://github.com/user-attachments/assets/ca161d03-f7f2-418f-84a3-d1ee3ef34493)
+
+
 This function is to deduce the prompt words according to the picture
 
-![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/7fe2a2b8-2b00-4388-becc-4646dca849c6)
+![image](https://github.com/user-attachments/assets/9939256e-423e-4bc6-accd-b9afb92a5fa9)
 
-The default modle is llava model. If you have a better model, you can change the model by changing the model name
+
+I provide 4 default vision models.  If you have a better model, you can add new model in the extra model. Click Run and it will automatically download the model.
+When downloading the model is completed, search and load the node again, and the newly downloaded model will be automatically loaded into the model list.
 
 Second function:
 
-![简单问答](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/21c8be5a-6470-4063-8a8a-3d787dadff82)
+![My Ollama Generate WorkFlow](https://github.com/user-attachments/assets/ffa537ee-7113-41c4-ba9b-dbb8fae3380b)
+
 
 This function is a simple question and answer function.
 
-![image](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/86021a02-b67f-4e8b-a759-96858cd5311b)
+![image](https://github.com/user-attachments/assets/34d184a6-753d-477e-b9d6-0341d43fdba7)
 
 
-The default modle is llama3 model. If you have a better model, you can change the model by changing the model name
+
+I provide 6 default text models.  If you have a better model, you can add new model in the extra model. Click Run and it will automatically download the model.
+When downloading the model is completed, search and load the node again, and the newly downloaded model will be automatically loaded into the model list.
+
 
 Third function:
 
-![提示词润色](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/252d3f32-7d4f-4df3-81a2-27a75f74fd58)
+![Ollama Generate Advance WorkFlow](https://github.com/user-attachments/assets/d421e4dd-5550-455c-83a8-590c788339a1)
+
 
 This function allows the model to be embellished according to your prompt words
 
 Four function:
 
-![上下文联系问答](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/5007aa0f-1cef-42a6-8b98-fc94c529eb71)
+![My Ollama Generate Advance WorkFlow-Context](https://github.com/user-attachments/assets/b569c912-d9c7-44c4-82ac-19f2afe38f60)
+
 
 This function is to answer questions by contacting above
 
-Five function：
+Five function:
+
+![Equal My Ollama Generate WorkFlow](https://github.com/user-attachments/assets/c8a81fe1-9401-470e-a318-b2e6e86c2de9)
+
+This function is to answers the question by loading the previously saved context
 
 
-![生成更符合stable diffusion的提示词](https://github.com/wujm424606/ComfyUi-Ollama-YN/assets/38379474/0981b60b-64f6-4840-9e02-d16f67041718)
+Six function：
+
+
+![My Ollama Special Generate Advance WorkFlow](https://github.com/user-attachments/assets/ba58906f-3752-4f0f-b379-814aada24f6e)
+
 
 This function is to generate prompt words that more closely follow the stable diffusion pattern
+
+Seven function：
+
+![My Ollama Delete Model WorkFlow](https://github.com/user-attachments/assets/c41e5a28-0396-4f54-bf33-bd986b8ad609)
+
+This function is to delete model which we downloaded.
 
 
 # Tips:
 
-If you get an error that says there is no model, install the model as described above
+1、
+
+Before：
+
+This is how to download models before updating:
 
 This project involves installing model commands in CMD
 
-1、ollama run llama3:8b-instruct-q4_K_M
+ollama run model_name
 
-2、ollama run llama3
+Now:
 
-3、ollama run phi3
+We can download model in the extra model by input model name.
+![DownLoad New Model Workflow](https://github.com/user-attachments/assets/68eb518d-00be-4d6c-b6df-c1d5bfa1fef4)
 
-4、ollama run phi3:3.8b-mini-instruct-4k-q4_K_M
 
-5、ollama run phi3:3.8b-mini-instruct-4k-fp16
+And the downloading process will be shown in the cmd：
 
-6、ollama run llava
+This is a sign picture of a successful download completion
+
+<img width="418" alt="download" src="https://github.com/user-attachments/assets/8c31d9de-7687-43f7-b11d-9d229778f9ce">
+
+
+2、 If you previously had download models and now want to display them in the load list
+    1、 first you can input "ollama list" in the cmd
+    <img width="831" alt="显示ollama list" src="https://github.com/user-attachments/assets/d9375695-e56c-466a-a8a1-eb0ba77cabee">
+    2、 then, you find the category.csv file in the ComfyUi-Ollama-YN\file and open it by excel or other tools.
+    <img width="290" alt="excel1" src="https://github.com/user-attachments/assets/c46b5411-da74-41f2-b9fd-ae65f2343421">
+    3、 Fill in the name of the model you found under the ollama list command into the two columns of the csv file. Whether the model is filled in vision_model or text_model can be judged based on the model description on the ollama website. The visual model is the back-deduced, and the text model can answer questions.
+    <img width="462" alt="excel2" src="https://github.com/user-attachments/assets/7f8ac70b-f7b0-42f9-802f-39c5956ff989">
+    4、 Save the csv file and open the comfyui， you can see the models you downloaded
+    <img width="385" alt="text模型名" src="https://github.com/user-attachments/assets/85c48a4c-30d7-477f-b3ee-c5e1787f1ecd">
+    <img width="385" alt="text模型名" src="https://github.com/user-attachments/assets/5c7a14a9-8b70-441a-84e4-f7c91fa67cf5">
+
+
+3、 When we find the model to download on the Ollama official website, if the model name after run does not have the: annotation parameter, it will automatically mark latest when downloading, so we need to manually add ":latest" after the model name to download this type of model in the extra model
+  <img width="648" alt="注意" src="https://github.com/user-attachments/assets/c408f47c-c1ed-454d-9e87-71d18e1e505f">
+  <img width="621" alt="注意2" src="https://github.com/user-attachments/assets/96c85f19-240a-4dc2-8f5a-fce1779d6bf3">
+  <img width="508" alt="注意3" src="https://github.com/user-attachments/assets/8f9d87fd-548e-4312-b8c8-1900da84cbc6">
+
+
+4、 When we download the model, we need to search and import it again, and the newly downloaded model will be displayed in the model list. However, don't use the right mouse button to directly reload the model, which will cause an error.
+   The correct way is as follows:
+   <img width="705" alt="正确方式" src="https://github.com/user-attachments/assets/d24656b1-f91e-418d-b718-1e78f7962c81">
+   <img width="423" alt="注意4png" src="https://github.com/user-attachments/assets/72ee4398-2482-4baa-8538-9fbde113de9e">
+
+   The wrong way is as follow:
+   <img width="482" alt="错误方式" src="https://github.com/user-attachments/assets/37f9b8a4-ae79-458e-8a10-884c2cad3402">
+
+5、Use the save context node to save the context into a file. If you use the load context node to load it at this time, the file will not be displayed. You need to restart comfyui to find the file
+
+
+
+   
+
+
+
+
+
+
+
+   
+    
+
+    
+    
+
 
 
 
